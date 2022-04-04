@@ -1,10 +1,12 @@
 :root {
 --text-color: #212121;
 --accent-color: #2196F3;
+--accent-color-hover: #188CE8;
 --text-contacts-color: #757575;
 --main-background-color: #FFFFFF;
 --frame-background-color: #F5F4FA;
 --footer-background-color: #2F303A;
+--text-contacts-color-footer: rgba(255, 255, 255, 0.6)
  }
 body {
     font-family: Roboto, sans-serif ;
@@ -16,7 +18,7 @@ body {
     font-family: Raleway, sans-serif ;
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     text-decoration: none;
 }
@@ -26,57 +28,80 @@ body {
 .logo-white {
     color: var(--main-background-color); 
 }
+.list-style{
+    list-style: none;
+}
 .navigation {
     text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    list-style: none;
 }
-.navigation:hover {
+.current{
     color: var(--accent-color);
 }
+.navigation:hover,
 .navigation:focus {
     color: var(--accent-color);
 }
 .list {
+    font-family: inherit;
     background-color: var(--frame-background-color);
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
-.list:hover {
-    color: var(--main-background-color);
-    background-color: var(--accent-color);
-}
+.list:hover, 
 .list:focus {
     color: var(--main-background-color);
     background-color: var(--accent-color);
 }
 .contacts {
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--main-background-color);
     text-decoration: none;
+    list-style: none;
+}
+.contacts-footer{
+    color: var(--text-contacts-color-footer);
 }
 .contacts-header {
     color: var(--text-contacts-color);
 }
-.contacts:hover{
+.contacts:hover,
+.contacts:focus {
     color: var(--accent-color);
 }
-.contacts:focus{
+.address:hover,
+.address:focus
+ {
     color: var(--accent-color);
 }
-button {
-    cursor: pointer;
+.address{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color:var(--main-background-color);
+    text-decoration: none;
 }
-li {
-    list-style: none;
-}
+
 .main-section{
     background-color: var(--footer-background-color);
+}
+.main-text {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.3;
@@ -84,8 +109,14 @@ li {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-background-color);
+
+}
+.button-main:hover,
+.button-main:focus{
+   background-color: var(--accent-color-hover);  
 }
 .button-main {
+    font-family: inherit;
     background-color: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
@@ -94,8 +125,9 @@ li {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--main-background-color);
+    cursor: pointer;
     }
-    h3 {
+.description {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.1;
@@ -109,6 +141,14 @@ li {
     line-height: 1.7;
     letter-spacing: 0.03em; 
     color: var(--text-contacts-color);
+}
+.description-job{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:var(--text-color); 
 }
 .position {
     font-weight: 400;
@@ -124,7 +164,7 @@ li {
         letter-spacing: 0.06em;
          color: var(--text-color);
     }
-    footer {
+    .footer {
         background-color: var(--footer-background-color);
     }
     .projects-text {
